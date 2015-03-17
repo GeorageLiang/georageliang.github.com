@@ -7,20 +7,19 @@ body{
 background-color: gainsboro;
   min-width: 950px;
 }
-.nav{
+.navbar{
   width: 100%;
   height: 50px;
-  background-color: #111111;
   position: fixed;
   min-width: 950px;
   z-index: 1;
 }
-.nav li {
+.navbar li {
   float: left;
   list-style-type: none;
   margin-left: 10%;
 }
-.nav li a{
+.navbar li a{
   text-decoration: none;
   color: #0086b3;
 }
@@ -37,7 +36,7 @@ background-color: gainsboro;
   min-width: 1000px;
   height: 1080px;
   margin: 0 auto;
-  background-color: snow;
+  background-color: white;
 }
 .head-img{
   height: 120px;
@@ -69,5 +68,8 @@ background-color: gainsboro;
   width: 100%;
   height: 70px;
   background-color: #111111;
+}
+.thumbnail img{
+  width: 40%;
 }
 
