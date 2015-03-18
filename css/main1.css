@@ -6,6 +6,7 @@ body{
   padding: 0;
 background-color: gainsboro;
   min-width: 950px;
+  background: url("/imgs/brickwall.png") repeat;
 }
 
 
