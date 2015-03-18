@@ -28,6 +28,7 @@ background-color: gainsboro;
 }
 .navbar-inverse{
   -webkit-transition: background-color 1s;
+  border: 0;
 }
 .navbar li {
   float: left;
@@ -45,7 +46,7 @@ background-color: gainsboro;
   position: fixed;
   min-width: 950px;
   z-index: 1;;
-  background-color: #CCCCCC;
+  background-color: white;
   opacity: 0.7;
   box-shadow: 0 3px 10px rgba(0,0,0,.5);
   border: 0;
@@ -96,11 +97,11 @@ background-color: gainsboro;
 }
 .main-container{
   width: 100%;
-  height: 300px;
+  min-height: 300px;
 }
 .footer{
   width: 100%;
-  height: 70px;
+  height: 60px;
   background-color: #111111;
 }
 .thumbnail img{
@@ -110,7 +111,7 @@ background-color: gainsboro;
 .boundary{
   background-color: #373157;
   height: 150px;
-  margin-bottom: 50px;
+  /*margin-bottom: 50px;*/
   box-shadow: inset 0 3px 10px rgba(0,0,0,.4);
 }
 .center-grid{
@@ -121,8 +122,8 @@ background-color: gainsboro;
 .jekyll-board{
   width: 50%;
   float: right;
-  color: #337ab7;
-  margin-top: -17px;
+  color: rgb(255,152,0);
+  margin-top: -25px;
 }
 .board-title{
   font-family: jekyllTitleFont ;
@@ -135,6 +136,12 @@ background-color: gainsboro;
   margin: 0 20px;
   height: 30px;
   line-height: 30px;
+  color:#0086b3 ;
+}
+.jekyll-board span{
+  color:green;
+  font-weight: bold;
+
 }
 .board-content{
   padding: 20px;
@@ -143,5 +150,32 @@ background-color: gainsboro;
   background: #3d3d3d;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 5px 30px rgba(0,0,0,.3);
+}
+.boundary-text{
+  float: left;
+  width: 30%;
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+.github-grid{
+  background-color: #222;
+  height: 500px;
+  margin-bottom: 50px;
+
+}
+.github-board{
+  margin: 180px auto;
+  width: 80%;
+  height: 220px;
+  background: #444;
+  border-radius: 10px;
+}
+.github-board img{
+  width: 280px;
+}
+.clear{
+
+  height: 100px;
 }
 
