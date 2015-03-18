@@ -7,6 +7,18 @@ body{
 background-color: gainsboro;
   min-width: 950px;
 }
+
+
+@font-face {
+  font-family: 'jekyllTitleFont';
+  src: url('../fonts/font1/NexaRustSlab-BlackShadow01-Free.eot');
+  src: url('../fonts/font1/NexaRustSlab-BlackShadow01-Free.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/font1/NexaRustSlab-BlackShadow01-Free.woff') format('woff'),
+  url('../fonts/font1/NexaRustSlab-BlackShadow01-Free.ttf') format('truetype'),
+  url('../fonts/font1/NexaRustSlab-BlackShadow01-Free.svg#jekyllTitleFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 .navbar{
   width: 100%;
   height: 50px;
@@ -18,6 +30,7 @@ background-color: gainsboro;
   float: left;
   list-style-type: none;
   margin-left: 10%;
+  margin-top: 13px;
 }
 .navbar li a{
   text-decoration: none;
@@ -70,5 +83,42 @@ background-color: gainsboro;
 .thumbnail img{
   width: 150px;
   height: 150px;
+}
+.boundary{
+  background-color: #373157;
+  height: 150px;
+  margin-bottom: 50px;
+  box-shadow: inset 0 3px 10px rgba(0,0,0,.4);
+}
+.center-grid{
+  max-width: 978px;
+  height: 150px;
+  margin: 0 auto;
+}
+.jekyll-board{
+  width: 50%;
+  float: right;
+  color: #337ab7;
+  margin-top: -17px;
+}
+.board-title{
+  font-family: jekyllTitleFont ;
+  border-radius: 5px 5px 0 0;
+  background-color: ghostwhite;
+  box-shadow: 0 3px 10px rgba(0,0,0,.5);
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 4px;
+  margin: 0 20px;
+  height: 30px;
+  line-height: 30px;
+}
+.board-content{
+  padding: 20px;
+  text-shadow: none;
+  margin: 0 20px;
+  background: #3d3d3d;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 5px 30px rgba(0,0,0,.3);
 }
 
