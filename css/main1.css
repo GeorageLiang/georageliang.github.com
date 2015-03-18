@@ -85,6 +85,8 @@ background-color: gainsboro;
   position: relative;
   top: -50px;
   left: 15%;
+  border-radius: 15%;
+  box-shadow: 0 3px 10px rgba(0,0,0,.5);
 }
 .head-title{
   width: 400px;
