@@ -202,3 +202,10 @@ background-color: gainsboro;
 }
 
 
+/*---page---*/
+.page-content{
+  margin-top: 50px;
+  width: 100%;
+  padding-top: 40px;
+}
+
