@@ -1,8 +1,3 @@
-encoding: utf-8
 name: Your New Jekyll Site
 markdown: redcarpet
 pygments: true
-baseurl: /
-url: /
-
-relative_permalinks: false
