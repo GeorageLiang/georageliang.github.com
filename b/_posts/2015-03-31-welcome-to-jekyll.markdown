@@ -1,17 +1,9 @@
 ---
 layout: post
-title:  "jekyllVersion"
+title:  "Welcome to Jekyll!"
 date:   2015-03-31 09:19:11
 categories: jekyll update
-permalink: /md/jekyllVersion/
 ---
->jekyll 稳定版本：1.4.2
-
-```
-gem install jekyll --version "=1.4.2"
-gem uninstall pygments.rb --version "=0.5.4"
-gem install pygments.rb --version "=0.5.0"
-```
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
 To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
