@@ -208,4 +208,14 @@ background-color: gainsboro;
   width: 100%;
   padding: 40px;
 }
+.slidebar{
+  padding-top: 15px;
+
+  background-color: #111;
+  float: right;
+  margin-top: 70px;
+  width: 220px;
+  border-radius: 5px;
+  box-shadow: 0 5px 30px rgba(0,0,0,.3);
+}
 

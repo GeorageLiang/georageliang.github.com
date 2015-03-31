@@ -4,5 +4,4 @@ markdown: redcarpet
 pygments: true
 baseurl: /
 url: /
-
 relative_permalinks: false
