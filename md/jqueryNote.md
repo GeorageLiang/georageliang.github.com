@@ -3,7 +3,7 @@ layout: post
 title:  "jqueryNOte"
 date:   2015-03-31 09:19:11
 categories: javascript
-permalink: /md/jqueryNOte/
+permalink: /md/jqueryNote/
 ---
 
 Jquery 源码学习笔记
