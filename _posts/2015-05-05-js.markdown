@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Javascript 原型随笔"
+date:   2015-05-05 09:19:11
+categories: js
+path: /md/prototype
+describe: 关于js原型的学习笔记
+---
+

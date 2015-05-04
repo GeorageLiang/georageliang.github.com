@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Transitions</title>
+  <meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views" />
+  <meta name="keywords" content="transition, off-canvas, navigation, effect, 3d, css3, smooth" />
+  <meta name="author" content="Codrops" />
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/sidebar/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/sidebar/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/sidebar/icons.css" />
+  <link rel="stylesheet" type="text/css" href="css/sidebar/component.css" />
+  <script src="js/sidebar/modernizr.custom.js"></script>
+</head>
+
+
+
+<body>
+<div id="st-container" class="st-container">
+  <!--
+    example menus
+    these menus will be on top of the push wrapper
+  -->
+
+
+  <nav class="st-menu st-effect-5" id="menu-5">
+    <h2 class="icon icon-stack">Sidebar</h2>
+    <ul>
+      <li><a class="icon icon-data" href="#">Data Management</a></li>
+      <li><a class="icon icon-location" href="#">Location</a></li>
+      <li><a class="icon icon-study" href="#">Study</a></li>
+      <li><a class="icon icon-photo" href="#">Collections</a></li>
+      <li><a class="icon icon-wallet" href="#">Credits</a></li>
+    </ul>
+  </nav>
+
+
+
+  <!-- content push wrapper -->
+  <div class="st-pusher">
+    <!--
+      example menus
+      these menus will be under the push wrapper
+    -->
+
+
+    <div class="st-content"><!-- this is the wrapper for the content -->
+      <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+        <!-- Top Navigation -->
+
+        <div class="main clearfix">
+          <div id="st-trigger-effects" class="column">
+            {% include header.html %}
+            <button data-effect="st-effect-5">Reverse slide out</button>
+            {{content}}
+            {% include footer.html %}
+          </div>
+
+        </div><!-- /main -->
+      </div><!-- /st-content-inner -->
+    </div><!-- /st-content -->
+  </div><!-- /st-pusher -->
+</div><!-- /st-container -->
+<script src="js/sidebar/classie.js"></script>
+<script src="js/sidebar/sidebarEffects.js"></script>
+<script src="/js/jquery-2.1.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/headroom.js"></script>
+<script  type="text/javascript"  src="https://rawgithub.com/WickyNilliams/headroom.js/master/src/jQuery.headroom.js"></script>
+<script src="/js/geo.js"></script>
+</body>
+
+
+</html>

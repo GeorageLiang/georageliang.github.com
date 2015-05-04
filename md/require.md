@@ -9,6 +9,16 @@ permalink: /md/require/
 
 RequireJs Note
 =============
+
+###什么是requireJS
+
+> 基于 AMD（Asynchronous Module Definition）的 JavaScript 设计已经在目前较为流行的前端框架中大行其道，
+> jQuery、Dojo、MooTools、EmbedJS 等纷纷在其最新版本中加入了对 AMD 的支持。
+> 既想使用 AMD 的特性又不想引入一个庞大的库的开发人员，不妨试试 RequireJS。
+> RequireJS 可以帮助用户异步按需的加载 JavaScript 代码，并解决 JavaScript 模块间的依赖关系，提升了前端代码的整体质量和性能。
+
+###使用：
+
 - ###HTML
                 <html>
                 <head>
