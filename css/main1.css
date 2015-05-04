@@ -261,3 +261,11 @@ background-color: gainsboro;
 .ds-powered-by a{
   display: none;
 }
+.up-arrow img{
+  width: 60px;
+  position: fixed;
+  bottom: 15%;
+  right: 6%;
+  border-radius: 100%;
+  cursor: pointer;
+}
