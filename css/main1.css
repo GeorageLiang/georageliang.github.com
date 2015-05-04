@@ -268,4 +268,5 @@ background-color: gainsboro;
   right: 6%;
   border-radius: 100%;
   cursor: pointer;
+  display: none;
 }
