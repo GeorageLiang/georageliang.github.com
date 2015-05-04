@@ -28,7 +28,7 @@ permalink: /md/goAgent/
 提交之后，就能看到下图这个页面，就说明你已经成功创建了一个新的应用,你也可以点击应用名称，进入控制面板进行管理。<br>
 ![](http://ww4.sinaimg.cn/large/786e2887tw1e4thubz37cj20go049t8w.jpg)<br>
 
-## 开启Google帐户两步验证和创建应用专用密码
+## 二、开启Google帐户两步验证和创建应用专用密码
 * 打开Google帐户安全性页面，修改两步验证：<br>
 ![](http://www.mzwu.com/pic/201207/042.jpg)<br>
 * 开始设置两步验证：<br>
@@ -41,7 +41,8 @@ permalink: /md/goAgent/
 ![](http://www.mzwu.com/pic/201207/048.jpg)<br>
 ![](http://www.mzwu.com/pic/201207/049.jpg)<br>
 ![](http://www.mzwu.com/pic/201207/050.jpg)<br>
-##  二、下载GoAgent并上传至Google App Engine
+
+##  三、下载GoAgent并上传至Google App Engine
 * 下载GoAgent并解压
  * [GoAgent官方下载链接](http://goo.gl/qFyRk)<br>
  * [网盘链接]( http://pan.baidu.com/s/1dDD6KYt): goagent.zip<br>
@@ -53,7 +54,7 @@ permalink: /md/goAgent/
 <img src="http://ww1.sinaimg.cn/large/786e2887jw1e3bnmhap9wj.jpg?uploaded.png"  width="600" /><br>
 * 上传成功后编辑local\proxy.ini，把其中appid = goagent中的goagent 改成你已经上传成功的应用的appid
 
-##  三、Chrome浏览器配置
+##  四、Chrome浏览器配置
 * 安装扩展
  * 地址栏输入chrome://extensions/后按回车，打开扩展管理页，将local文件夹中的SwitchySharp.crx拖拽到该页面之后点击确定即可安装<br>
 <img src="http://ww4.sinaimg.cn/large/786e2887tw1e3hhmzjy1zj.jpg?install_Proxy_Switchy_Sharp.png"  width="600" /><br>
@@ -71,7 +72,7 @@ permalink: /md/goAgent/
  * **GoAgent Socks5**模式 全部通过Socks5（暂不可用）
  * 自动切换模式 根据切换规则自动选择是否进行代理，自动选择使用何种代理
 
-## 四、Mac开机自动启动GoAgent
+## 五、Mac开机自动启动GoAgent
 * 在local/目录下执行下面这条命令即可<br>
 	`python addto-startup.py`
 * 如果权限不够，执行<br>
