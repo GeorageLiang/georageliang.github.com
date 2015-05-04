@@ -258,3 +258,6 @@ background-color: gainsboro;
   height: 60px;
   background-color: greenyellow;
 }
+.ds-powered-by a{
+  display: none;
+}

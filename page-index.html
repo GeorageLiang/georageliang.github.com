@@ -28,7 +28,9 @@ layout: default
             <span class="time-label">{{ post.date | date_to_string }}</span>
           </div>
           <div class="time-content" >
+            <strong><h3>{{post.title}}</h3></strong>
               {{ post.describe}}
+            <a href={{ post.path }}><strong>传送门...</strong></a>
           </div>
         </div>
 
