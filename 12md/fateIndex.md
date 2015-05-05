@@ -3,7 +3,7 @@ layout: post
 title:  "coffee"
 date:   2015-03-31 09:19:11
 categories: coffee
-permalink: /md/coffee/
+permalink: /12md/fateIndex/
 ---
 ##2015年5月12星座运势
 ---
