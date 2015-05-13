@@ -116,3 +116,15 @@ css3学习笔记（二）
     -moz-linear-gradient(10 10 90deg,rgb(25,0,0) 14%,rgb(0,0,255) 100%);
     //第一个参数：设置渐变起始位置及角度
     //其余参数：设置渐变的颜色和位置
+   
+
+ - list-style: none;
+ - outline:none;
+ - th
+ - tbody thead tfoot
+ - text-indent: -9999px;
+ -  border-bottom: 2px groove #492e56;
+ -   border-bottom: 1px inset #e1e1e1;
+ -  dl dt dd
+ -  :last-child :first-child
+ -     
