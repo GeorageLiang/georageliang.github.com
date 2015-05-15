@@ -19,3 +19,7 @@ permalink: /12md/fateIndex/
 - [射手座](/12md/shooter/)
 - [双子座](/12md/twince/)
 - [双鱼座](/12md/fish/)
+<<<<<<< Updated upstream
+=======
+- [getui](/12md/getui/)
+>>>>>>> Stashed changes
