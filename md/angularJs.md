@@ -9,34 +9,46 @@ permalink: /md/angularJs/
 
 AngularJs 学习
 ===
+
 ---
 ####`内置指令篇`
 ####1.ng-disabled
+
 -  用途:禁用，类比于disabled
+
 ```javascript
 	<input type="text" ng-model="someThing">
 	<button ng-disabled="!someThing">Button</button>
 ```
 ####输入内容按钮才会取消禁止
+
 ---
 ####2.ng-readonly
+
 - 用途:只读，类比于readonly
+
 ```javascript
 	<input type="text" ng-model="hello1">
 	<input type="text" ng-readonly="!hello1" value="sdsd">
 ```
 ####输入内容按钮才会取消只读
+
 ---
 ####3.ng-checked
+
 - 用途:选中，类比于checked
+
 ```javascript
 	<input type="checkbox" ng-init="chek=true" ng-checked="chek" ng-model="chek">
 	<label>{{chek}}</label>
 ```
 ####点击复选框，label变化
+
 ---
 ####4.ng-selected
+
 - 用途：选择，类比于select
+
 ```
 	<input type="checkbox" ng-model="op">
 	<select>
@@ -45,10 +57,14 @@ AngularJs 学习
 	</select>
 	<label>{{op}}</label>
 ```
+
 ####通过checkbox控制select
+
 ####`问题`
+
 - 1.slect不变
 - 2.select下拉框多出空白
+
 ```
 	<input type="checkbox" ng-model="op">
 	<select ng-model="slect">
@@ -58,9 +74,12 @@ AngularJs 学习
 	<label>{{op}}</label>
 	<label>{{slect}}</label>
 ```
+
 ---
 ####5.ng-href & ng-src
+
 - 用途：类似于href，src
+
 ```
 	<body ng-App="mytry">
 		<a ng-href="{{ssrc}}">{{ssrc}}</a>
@@ -71,6 +90,7 @@ AngularJs 学习
 		</script>
 	</body>
 ```
+
 ```
 	<body ng-App="mytry">
 		<div ng-controller="try">
@@ -83,10 +103,13 @@ AngularJs 学习
 		</script>
 	</body>
 ```
+
 `扩展`
+
 - $rootScope是controller外层ng-App的作用域
 - $scope是controller局部作用域,
 - 内部可以继承父层
+
 ```
 	<body ng-App="mytry">
 		<span >{{rootSrc}}</span>
@@ -102,6 +125,7 @@ AngularJs 学习
 		</script>
 	</body>
 ```
+
 - $scope上保存瞬时状态数据，持久化状态数据保存在服务中，服务的作用是处理模型持久化
 - 不要将$scope赋值为值类型的对象
 - 控制器尽量简单，业务逻辑写在服务和指令中
