@@ -3,7 +3,7 @@ layout: post
 title:  "Angular"
 date:   2015-06-11 22:40:11
 categories: Angular
-permalink: /md/angular/
+permalink: /md/angularJs/
 ---
 
 AngularJs 学习
