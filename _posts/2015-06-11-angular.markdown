@@ -1,8 +1,0 @@
----
-layout: post
-title:  "Angular学习随笔!"
-date:   2015-06-11 22:43:11
-categories: angularjs
-path: /md/angularJs
-describe: 2015 angular学习之旅
-
