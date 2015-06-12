@@ -6,4 +6,4 @@ baseurl: /
 url: /
 relative_permalinks: false
 paginate: 6
-paginate_path: "page:num"
+paginate_path: "/blogindex/page:num/"
