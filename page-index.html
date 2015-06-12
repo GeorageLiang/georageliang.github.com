@@ -1,40 +1,40 @@
----
-layout: default
----
-<div class="slidebar">
-  <ol>
-    <li><a name="#1">1</a></li>
-    <li><a name="#2">1</a></li>
-    <li><a name="#3">1</a></li>
-  </ol>
-</div>
-    <div class="container">
-      <div class="page-content">
-        <!--<ol>-->
-          <!--<li><a href="/md/jekyllVersion/">jekyll 版本</a></li>-->
-          <!--<li><a href="/md/jqueryNote/">jqueryNote</a></li>-->
-          <!--<li><a href="/md/prototype/">prototype</a></li>-->
-          <!--<li><a href="/md/require/">require</a></li>-->
-          <!--<li><a href="/md/javascript/">javascript</a></li>-->
-          <!--<li><a href="/md/jade/">jade</a></li>-->
-          <!--<li><a href="/md/css/">css</a></li>-->
-          <!--<li><a href="/md/coffee/">coffee</a></li>-->
-          <!--<li><a href="/md/backbone-nested/">backbone-nested</a></li>-->
-        <!--</ol>-->
-        {% for post in paginator.posts %}
-        <div class="time-line">
-          <div class="time-head">
-            {% include labelHead.html %}
-            <span class="time-label">{{ post.date | date_to_string }}</span>
-          </div>
-          <div class="time-content" >
-            <strong><h3>{{post.title}}</h3></strong>
-              {{ post.describe}}
-            <a href={{ post.path }}><strong>传送门...</strong></a>
-          </div>
-        </div>
+<!------->
+<!--layout: default-->
+<!------->
+<!--<div class="slidebar">-->
+  <!--<ol>-->
+    <!--<li><a name="#1">1</a></li>-->
+    <!--<li><a name="#2">1</a></li>-->
+    <!--<li><a name="#3">1</a></li>-->
+  <!--</ol>-->
+<!--</div>-->
+    <!--<div class="container">-->
+      <!--<div class="page-content">-->
+        <!--&lt;!&ndash;<ol>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li><a href="/md/jekyllVersion/">jekyll 版本</a></li>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li><a href="/md/jqueryNote/">jqueryNote</a></li>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li><a href="/md/prototype/">prototype</a></li>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li><a href="/md/require/">require</a></li>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li><a href="/md/javascript/">javascript</a></li>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li><a href="/md/jade/">jade</a></li>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li><a href="/md/css/">css</a></li>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li><a href="/md/coffee/">coffee</a></li>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li><a href="/md/backbone-nested/">backbone-nested</a></li>&ndash;&gt;-->
+        <!--&lt;!&ndash;</ol>&ndash;&gt;-->
+        <!--{% for post in paginator.posts %}-->
+        <!--<div class="time-line">-->
+          <!--<div class="time-head">-->
+            <!--{% include labelHead.html %}-->
+            <!--<span class="time-label">{{ post.date | date_to_string }}</span>-->
+          <!--</div>-->
+          <!--<div class="time-content" >-->
+            <!--<strong><h3>{{post.title}}</h3></strong>-->
+              <!--{{ post.describe}}-->
+            <!--<a href={{ post.path }}><strong>传送门...</strong></a>-->
+          <!--</div>-->
+        <!--</div>-->
 
-        {% endfor %}
+        <!--{% endfor %}-->
 
-      </div>
-    </div>
+      <!--</div>-->
+    <!--</div>-->
