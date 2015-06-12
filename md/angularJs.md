@@ -76,6 +76,19 @@ AngularJs 学习
 ```
 
 ---
+
+####`解惑` 
+
+- 1.slect不变
+
+> (ng-selected想象成类似于css的显示作用，所以改变option的选中状态，只改变显示不影响select的model变化)
+
+- 2.select下拉框多出空白
+
+> 由于select的model没有初始化，所以无法找到对应的option，就显示成一个空的option，当点击时直接选中第一个option
+
+---
+
 ####5.ng-href & ng-src
 
 - 用途：类似于href，src
