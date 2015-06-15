@@ -275,7 +275,7 @@ ng-view 用来设置路由管理的html视图
 
 ---
 
-####{{}} & ng-bind &ng-cloak
+####{} & ng-bind &ng-cloak
 ng-bind的简略形式，常用于行内文本中
 `注意`
 - 页面加载时未渲染元素会发生闪烁
