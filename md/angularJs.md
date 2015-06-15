@@ -143,3 +143,23 @@ AngularJs 学习
 - 不要将$scope赋值为值类型的对象
 - 控制器尽量简单，业务逻辑写在服务和指令中
 
+---
+
+sublimetext2---
+angular-snippets
+
+```
+// Settings in here override those in "User/Preferences.sublime-settings", and
+// are overridden in turn by file type specific settings.
+{
+  "auto_complete_selector": "source - comment, meta.tag - punctuation.definition.tag.begin",
+  "auto_complete_triggers":
+    [
+      {
+      "characters": "ng-controller=\"*",
+      "selector": "punctuation.definition.string"
+      }
+    ]
+}
+```
+
