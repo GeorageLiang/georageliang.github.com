@@ -449,3 +449,77 @@ ng-bind的简略形式，常用于行内文本中
 	</svg>
 ```
 
+---
+
+`directive practice`
+
+```
+	<html>
+    <head>
+        <script src="http://cdn.bootcss.com/angular.js/1.4.0-rc.2/angular.min.js"></script>
+    </head>
+    <body ng-app="mytry">
+        <input type="text" ng-model="ii">
+        <haha mytrr="{{ii}}"></haha>
+       
+        <script>
+            angular.module("mytry",[]).directive("haha",function(){
+                return {
+                    restrict:"EA",
+                    scope:{
+                        yy:"@mytrr"
+                    },
+                    replace:true,
+                    template:"<div>{{yy}}</div>"
+                }
+            })
+        </script>
+    </body>
+</html>
+```
+
+---
+
+`controller 作用域问题`
+
+> 字符串，数字，布尔型变量为值复制（父作用域影响子作用域，子作用于不影响父作用域）；
+> 数组，对象，函数是引用复制（相互影响）；
+
+```
+	 <div ng-controller="parent">
+            <h3>{{parentt.aa}}</h3>
+            //<h3>{{parentt}}</h3>
+            <button ng-click="haha()">sss</button>
+            <div ng-controller="child">
+                <h3>{{parentt.aa}}</h3>
+                //<h3>{{parentt}}</h3>
+            <button ng-click="haha1()">sss</button>
+            </div>
+        </div>
+        <script>
+            angular.module("mytry",[]).controller("parent",function($scope){
+                $scope.parentt ={
+                    aa: "22sss"
+                };
+                // $scope.parentt = "22sss";
+                $scope.haha = function(){
+                    $scope.parentt.aa = "parent";
+                     // $scope.parentt = "parent";
+                }
+
+            }).controller("child",function($scope){
+                
+                $scope.haha1 = function(){
+                    $scope.parentt.aa = "child";
+                     // $scope.parentt = "child";
+                }
+            });
+        </script>
+```
+
+`扩展`
+
+- 值复制时，子作用域点击，父级作用域影响解除，子作用独立，初始时由父作用域控制
+
+---
+
