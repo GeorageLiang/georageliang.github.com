@@ -174,7 +174,6 @@ angular-snippets
 - 不能访问file协议资源（使用firfox可以解决）
 - 建议使用 ng-include="'include.html'"
 
-···
 
 ```
 <body ng-app="hah">
