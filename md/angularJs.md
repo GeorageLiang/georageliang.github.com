@@ -40,7 +40,7 @@ AngularJs 学习
 
 ```javascript
 	<input type="checkbox" ng-init="chek=true" ng-checked="chek" ng-model="chek">
-	<label>\{{chek\}}</label>
+	<label>{chek}</label>
 ```
 ####点击复选框，label变化
 
