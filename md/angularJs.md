@@ -192,7 +192,7 @@ angular-snippets
 include.html
 
 ```
-	<h3>{{h}}</h3>
+	<h3>{{ h }}</h3>
 ```
 
 - 引入页享有controller的scope
