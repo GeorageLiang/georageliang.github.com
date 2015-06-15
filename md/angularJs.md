@@ -40,7 +40,7 @@ AngularJs 学习
 
 ```javascript
 	<input type="checkbox" ng-init="chek=true" ng-checked="chek" ng-model="chek">
-	<label>{chek}</label>
+	<label>\{\{chek\}\}</label>
 ```
 ####点击复选框，label变化
 
@@ -308,4 +308,143 @@ ng-bind的简略形式，常用于行内文本中
 ---
 
 ####ng-change
+表单元素变化便执行函数
+- 类比于backbone event change
+
+```
+	<div ng-controller="ha">
+		<input type="text" ng-model="x" ng-change="hh()">
+		{{ww}}
+	</div>
+		
+
+	<script type="text/javascript">
+	angular.module('my', []).controller("ha",function($scope){
+		$scope.hh = function(){
+			$scope.ww = parseInt($scope.x)*2;
+		}
+	});
+	</script>
+```
+
+---
+
+####ng-form
+用于form嵌套，比如一个父表单中有多个子表单，子表单中有3个验证通过时父表单便可以提交。
+
+```
+	<body ng-app="my">
+	<form name="iForm" ng-controller="ha">
+		<div ng-form ="vaD">
+				<input 
+					type="text" name="userName" 
+					placeholder= {{filed.placeholder}} 
+					ng-required = {{filed.isRequire}}  
+					ng-model="username"
+				/>
+			<span ng-show="!vaD.userName.$valid">
+				erro
+			</span>
+			<span ng-show="vaD.userName.$error.required">
+				must
+			</span>
+			
+		</div>
+		<input type="submit" ng-disabled="iForm.$invalid">
+	</form>
+		
+
+	<script type="text/javascript">
+	angular.module('my', []).controller("ha",function($scope){
+		$scope.filed = {
+			placeholder: "username",
+				name:"username",
+				isRequire:true
+		}
+	
+	});
+	</script>
+</body>
+```
+
+`问题`
+- 关于动态生成有验证功能的表单
+- 无法动态生成ng-model
+
+---
+
+####ng-click 
+不解释了，大家都懂得
+
+---
+
+####ng-select
+动态生成select标签，感觉很强大
+- 通常用法：ng-model + ng-option
+- as 作为表现
+
+```
+	<div ng-controller="ha">
+		<select ng-model="icity" 
+			ng-options=
+			"city.value as city.name group by city.group for city in citys"
+		>
+		</select>
+		{{icity}}
+	</div>
+	<script type="text/javascript">
+	angular.module('my', []).controller("ha",function($scope){
+		$scope.citys = [
+			{
+				name:"1",
+				value:"11",
+				group:"r"
+			},
+			{
+				name:"2",
+				value:"22",
+				group:"r"
+			},
+			{
+				name:"23",
+				value:"23",
+				group:"rq"
+			}
+		]	
+	});	
+	</script>
+```
+
+---
+
+####ng-submit
+用于同onsubmit事件绑定
+
+---
+
+####ng-class
+动态设置元素的类
+
+```
+	<div ng-class="{red:x>5}" ng-if="x>5">haha</div>
+	<button ng-click="x = random()"></button>
+```
+
+---
+
+####ng-attr-(suffix)
+
+有时浏览器会对属性进行很苛刻的限制，这个时候可以用这个
+
+```
+	<svg>
+		<circle cx={{cx}}> </circle>
+	</svg>
+```
+
+```
+	<svg>
+		<circle ng-attr-cx={{cx}}> </circle>
+	</svg>
+```
 
