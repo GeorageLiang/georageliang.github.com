@@ -11,7 +11,7 @@ AngularJs 学习
 ===
 
 ---
-####`内置指令篇`
+####`内置指令篇` `注：笔记中双大括号暂用{}表示`
 ####1.ng-disabled
 
 -  用途:禁用，类比于disabled
@@ -55,7 +55,7 @@ AngularJs 学习
 		<option   value="123">11</option>
 		<option   ng-selected="op" value="1234">112</option>
 	</select>
-	<label>{{op}}</label>
+	<label>{op}</label>
 ```
 
 ####通过checkbox控制select
@@ -71,8 +71,8 @@ AngularJs 学习
 		<option   value="123">11</option>
 		<option   ng-selected="op" value="1234">112</option>
 	</select>
-	<label>{{op}}</label>
-	<label>{{slect}}</label>
+	<label>{op}</label>
+	<label>{slect}</label>
 ```
 
 ---
@@ -95,7 +95,7 @@ AngularJs 学习
 
 ```
 	<body ng-App="mytry">
-		<a ng-href="{{ssrc}}">{{ssrc}}</a>
+		<a ng-href="{ssrc}">{ssrc}</a>
 		<script>
 		angular.module("mytry",[]).run(function($rootScope){
 			$rootScope.ssrc = "http://baidu.com"
@@ -107,7 +107,7 @@ AngularJs 学习
 ```
 	<body ng-App="mytry">
 		<div ng-controller="try">
-			<img ng-src="{{ssrc}}">
+			<img ng-src="{ssrc}">
 		</div>
 		<script>
 		angular.module("mytry",[]).controller("try",function($scope){
@@ -127,7 +127,7 @@ AngularJs 学习
 	<body ng-App="mytry">
 		<span >{{rootSrc}}</span>
 		<div ng-controller="try">
-		<a ng-href="{{ssrc}}">{{ssrc}}</a>
+		<a ng-href="{ssrc}">{ssrc}</a>
 		</div>
 		<script>
 			angular.module("mytry",[]).run(function($rootScope){
@@ -178,7 +178,7 @@ angular-snippets
 ```
 <body ng-app="hah">
 	<div ng-controller="my">
-		{{h}}
+		{h}
 	</div>
 	<div ng-include="'include.html'" ng-controller="my" onload="h=1"></div>
 	<script type="text/javascript">
@@ -192,7 +192,7 @@ angular-snippets
 include.html
 
 ```
-	<h3>{{ h }}</h3>
+	<h3>{ h }</h3>
 ```
 
 - 引入页享有controller的scope
@@ -203,7 +203,7 @@ include.html
 ```
 	<input type="text" ng-model="h">
 	<div ng-switch on="h">
-		<div ng-switch-when="123">{{h}}</div>
+		<div ng-switch-when="123">{h}</div>
 		<div ng-switch-default>switch-default</div>
 	</div>
 ```
@@ -244,8 +244,8 @@ ng-view 用来设置路由管理的html视图
 		</thead>
 		<tbody>
 			<tr ng-repeat="p in arr">
-				<td ng-if="$even">{{$index}}</td>
-				<td ng-if="$even">{{p.name}}</td>
+				<td ng-if="$even">{$index}</td>
+				<td ng-if="$even">{p.name}</td>
 			</tr>
 		</tbody>
 	</table>
@@ -290,7 +290,7 @@ ng-bind的简略形式，常用于行内文本中
 绑定多个表达式
 
 ```
-	<div ng-bind-template="{{hello}} {{name}}></div>
+	<div ng-bind-template="{hello} {name}></div>
 ```
 
 ---
