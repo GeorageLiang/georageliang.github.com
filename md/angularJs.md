@@ -40,7 +40,7 @@ AngularJs 学习
 
 ```javascript
 	<input type="checkbox" ng-init="chek=true" ng-checked="chek" ng-model="chek">
-	<label>{\{chek}\}</label>
+	<label>{chek}</label>
 ```
 ####点击复选框，label变化
 
@@ -314,7 +314,7 @@ ng-bind的简略形式，常用于行内文本中
 ```
 	<div ng-controller="ha">
 		<input type="text" ng-model="x" ng-change="hh()">
-		{{ww}}
+		{ww}
 	</div>
 		
 
@@ -338,8 +338,8 @@ ng-bind的简略形式，常用于行内文本中
 		<div ng-form ="vaD">
 				<input 
 					type="text" name="userName" 
-					placeholder= {{filed.placeholder}} 
-					ng-required = {{filed.isRequire}}  
+					placeholder= {filed.placeholder}
+					ng-required = {filed.isRequire} 
 					ng-model="username"
 				/>
 			<span ng-show="!vaD.userName.$valid">
@@ -390,7 +390,7 @@ ng-bind的简略形式，常用于行内文本中
 			"city.value as city.name group by city.group for city in citys"
 		>
 		</select>
-		{{icity}}
+		{icity}
 	</div>
 	<script type="text/javascript">
 	angular.module('my', []).controller("ha",function($scope){
@@ -428,6 +428,7 @@ ng-bind的简略形式，常用于行内文本中
 ```
 	<div ng-class="{red:x>5}" ng-if="x>5">haha</div>
 	<button ng-click="x = random()"></button>
+	此处{}不为双引号
 ```
 
 ---
@@ -438,13 +439,13 @@ ng-bind的简略形式，常用于行内文本中
 
 ```
 	<svg>
-		<circle cx={{cx}}> </circle>
+		<circle cx={cx}> </circle>
 	</svg>
 ```
 
 ```
 	<svg>
-		<circle ng-attr-cx={{cx}}> </circle>
+		<circle ng-attr-cx={cx}> </circle>
 	</svg>
 ```
 
