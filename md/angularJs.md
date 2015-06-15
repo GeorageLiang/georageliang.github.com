@@ -163,3 +163,150 @@ angular-snippets
 }
 ```
 
+---
+
+####ng-include
+
+`问题`
+
+使用ng-include 不显示插入内容
+
+- 不能访问file协议资源（使用firfox可以解决）
+- 建议使用 ng-include="'include.html'"
+
+···
+
+```
+<body ng-app="hah">
+	<div ng-controller="my">
+		{{h}}
+	</div>
+	<div ng-include="'include.html'" ng-controller="my" onload="h=1"></div>
+	<script type="text/javascript">
+		angular.module('hah', []).controller('my',function($scope){
+			$scope.h =0;
+		});
+	</script>
+
+</body>
+```
+include.html
+
+```
+	<h3>{{h}}</h3>
+```
+
+- 引入页享有controller的scope
+
+---
+
+####ng-switch
+```
+	<input type="text" ng-model="h">
+	<div ng-switch on="h">
+		<div ng-switch-when="123">{{h}}</div>
+		<div ng-switch-default>switch-default</div>
+	</div>
+```
+
+---
+
+####ng-view
+
+ng-view 用来设置路由管理的html视图
+
+---
+
+####ng-if
+
+根据表达式的值在dom中生成或移除一个元素
+`区别`于 ng-show，ng-hide：
+- 并非通过css隐藏，而是正真的生成和删除节点
+
+---
+
+####ng-repeat
+
+- $index
+- $first
+- $middle
+- $last
+- $even
+- $odd
+
+```
+	<body ng-app="my">
+	<table ng-controller="ha">
+		<thead>
+			<tr>
+				<th>ind</th>
+				<th>name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="p in arr">
+				<td ng-if="$even">{{$index}}</td>
+				<td ng-if="$even">{{p.name}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script type="text/javascript">
+	angular.module('my', []).controller("ha",function($scope){
+		var ar1 = {
+			name:"ar1"
+		};
+		var ar2 = {
+			name:"ar2"
+		}
+		$scope.arr = [ar1,ar2];
+	});
+	</script>
+```
+
+`注意`
+- even 和odd 是index 的值,index从0开始
+- middle
+
+---
+
+####ng-init
+
+小实例的变量初始化
+
+---
+
+####{{}} & ng-bind &ng-cloak
+ng-bind的简略形式，常用于行内文本中
+`注意`
+- 页面加载时未渲染元素会发生闪烁
+
+解决闪烁
+- 使用ng-bind
+- 使用ng-cloak
+
+---
+
+####ng-bind-template
+绑定多个表达式
+
+```
+	<div ng-bind-template="{{hello}} {{name}}></div>
+```
+
+---
+
+####ng-model
+不用多说了
+
+---
+
+####ng-show & ng-hide
+类似show ，hide
+
+- 元素的显示和隐藏是通过添加和移除ng-hide这个css类实现的，.ng-hide被预先定义在angular的css文件中
+
+---
+
+####ng-change
+
