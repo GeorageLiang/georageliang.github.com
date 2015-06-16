@@ -14,6 +14,6 @@ gem install pygments.rb --version "=0.5.0"
 ```
 
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
-[jekyll 环境搭建]: http://poly.emptystack.net/docs/installation/
+[jekyll-gh]:https://github.com/mojombo/jekyll
+[jekyll]( http://jekyllrb.com)
+[jekyll 环境搭建](http://poly.emptystack.net/docs/installation/)
