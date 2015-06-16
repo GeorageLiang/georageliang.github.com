@@ -3,7 +3,7 @@ layout: post
 title:  "Angular"
 date:   2015-06-15 22:40:11
 categories: Angular
-permalink: /md/angularJs2/
+permalink: /md/angularJs-filter/
 ---
 
 
