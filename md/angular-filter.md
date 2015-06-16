@@ -117,3 +117,98 @@ AngularJs (第二弹)
 ####json
 
 将对象过滤成json字符串
+
+---
+
+####limitTo
+
+- 截取字符串或数组
+```
+	<body ng-app ="my">
+	<div ng-controller="ha">
+		{ sanFran | limitTo:3 }
+
+	</div>
+	
+	<script type="text/javascript">
+	angular.module('my', []).controller("ha",function($scope){
+		
+	$scope.sanFran="san franss";
+	});	
+	</script>
+</body>
+```
+
+---
+
+####lowercase & uppercase
+- 转大小写
+
+---
+
+####number 
+-  数字格式
+-  第二参数控制小数点后截取
+
+```
+	{123.123 | number：2}
+```
+
+---
+
+####orderBy
+- 排序
+- 3种参数形式
+- 字符串
+- 数组
+- 函数
+
+```
+	[{'name':A},{'name':b}] | orderBy：'name'
+```
+按名字排序（字母顺序）
+
+```
+ | orderBy：'-name'
+| orderBy：'name'：true
+```
+倒序
+
+```
+|orderBy：['age','name']
+```
+
+如果age相同按name排序
+
+---
+
+####自定义过滤器
+
+```
+<body ng-app ="my">
+	<div ng-controller="ha">
+		{ sanFran | suck}
+	</div>	
+	<script type="text/javascript">
+	angular.module('my', []).filter('suck',function(){
+		return function(input){
+			return input[0].toUpperCase()+ input.slice(1)
+		}
+	}).controller("ha",function($scope){		
+	$scope.sanFran="san";
+	});	
+	</script>
+</body>
+```
+
+`注意：`
+- 结构
+
+```	
+.filter("name",function(){
+	return function(){
+		return bulabula
+	}
+})
+```
+
