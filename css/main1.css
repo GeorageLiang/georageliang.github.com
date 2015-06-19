@@ -270,3 +270,15 @@ background-color: gainsboro;
   cursor: pointer;
   display: none;
 }
+#cat-head{
+  -webkit-transform-origin: 50% 50%;     //旋转定位在猫头的底中部（脖子位置）
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
