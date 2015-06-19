@@ -122,9 +122,13 @@ AngularJs (第三弹)
 ####$interpolate
 
 - 用途：字符串模板插值
+
 如果感觉不能理解，那就简单些说类似于Handlerbars
+
 `注意`
+
 这里说的是字符串模板，并非html模板
+
 ```
 <div ng-controller="haha">
 <input type="text" ng-model="name">
