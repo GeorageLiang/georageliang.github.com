@@ -92,9 +92,66 @@ AngularJs (第三弹)
 > $parse 服务用来进行表达式运算
 > 将 $parse 注入到控制器中，调用来进行手动解析表达式
 
-未完待续。。
+####$parse
+- 作用：`手动解析`表达式
+
+```
+<body ng-app="my">
+<div ng-controller="haha">
+<input type="text" ng-model="name">
+<h3>{{www}}</h3>
+</div>
+	<script type="text/javascript">
+	angular.module('my', []).controller('haha', function($scope,$parse){
+	$scope.$watch('name',function(newVal,oldVal,scope){
+		var m = $parse('name | limitTo:3');
+		console.log(m(scope));
+		$scope.www=m(scope);
+
+	});
+});
+	</script>
+```
 
 ---
+
+####$interpolate
+
+- 用途：字符串模板插值
+如果感觉不能理解，那就简单些说类似于Handlerbars
+`注意`
+这里说的是字符串模板，并非html模板
+```
+<div ng-controller="haha">
+<input type="text" ng-model="name">
+{{mm}}
+</div>
+	<script type="text/javascript">
+		angular.module('my', []).controller('haha', function($scope,$interpolate){
+			var tpl = "{{who}} know {{password}}"
+			var template = $interpolate(tpl);
+			var obj = {
+				who:"you",
+				password:"12345",
+			}
+			$scope.mm = template(obj);
+		});
+	</script>
+```
+
+---
+
+####$interpolateProvider
+- 用途：配置表达式的开始和结束符号
+
+```
+angular.module("name",[]).config(function($interpolateProvider){
+	$interpolateProvider.startSymbol('--');
+	$interpolateProvider.endSymbol('--');
+});
+```
+---
+
 
 `模块`
 
