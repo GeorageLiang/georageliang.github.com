@@ -1,20 +1,20 @@
-html {
-    font-size: 100%;
-    overflow-y: scroll;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-}
+/*html {*/
+    /*font-size: 100%;*/
+    /*overflow-y: scroll;*/
+    /*-webkit-text-size-adjust: 100%;*/
+    /*-ms-text-size-adjust: 100%;*/
+/*}*/
 
 body{
     font-family: "Helvetica Neue",Arial,"Hiragino Sans GB","STHeiti","Microsoft YaHei","WenQuanYi Micro Hei",SimSun,Song,sans-serif;
-    color: #2c3f51;
-    background-color: #fff;
-    border-color: #999999;
-    border-width: 2px;
-    line-height: 1.5;
-    margin: 2em 3em;
-    text-align:left;
-    padding: 0 100px 0 100px;
+    /*color: #2c3f51;*/
+    /*background-color: #fff;*/
+    /*border-color: #999999;*/
+    /*border-width: 2px;*/
+    /*line-height: 1.5;*/
+    /*margin: 2em 3em;*/
+    /*text-align:left;*/
+    /*padding: 0 100px 0 100px;*/
 }
 hr {
 margin-top: 21px;
