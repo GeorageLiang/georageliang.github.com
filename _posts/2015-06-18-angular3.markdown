@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Angular学习随记（番外）"
+date:   2015-06-18 22:50:11
+categories: angularJS
+path: /md/angular3
+describe: angular学习之旅番外1，进阶
+---
+
