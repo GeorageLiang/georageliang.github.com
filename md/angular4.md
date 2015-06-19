@@ -69,7 +69,9 @@ angular.module("name",[]).directive("dname",function(){
 ####priority（优先级）
 
 默认：0
+
 ngRepeat:1000（内置指令里优先级最高的）
+
 同一个元素上有两个优先级相同的指令，声明在前面的先调用
 
 ---
@@ -79,9 +81,11 @@ ngRepeat:1000（内置指令里优先级最高的）
 - false
 
 这个参数用来告诉Angular停止运行当前元素上比本指令优先级低的指令
+
 当摸个元素上的指令被设置了该参数，就不要用优先级比他低的指令了，因为不会执行
 
 ng-if优先级>ngView
+
 当ng-if为true，ngView会执行，当ng-if为false，ngView就不会执行
 
 ---
@@ -136,6 +140,7 @@ ng-if优先级>ngView
 
 ####replace
 如果设置这个参数，就将值设为true（替换），
+
 设置为false与不使用该参数一样（魔板被当做子元素插入调用指令元素内部）
 
 ---
