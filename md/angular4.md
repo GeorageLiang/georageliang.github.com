@@ -208,6 +208,87 @@ $scope.haha//就可以获取到了
 
 ---
 
+####transclude
+
+- 默认为false
+- 如果设置了，必须设置为true
+- 用途：指令中嵌入，将指令标签内部的标签或指令嵌入指令内部模板中
+- 这样可以将任意内容，作用域传给指令，指令内部可以访问外部指令的作用域，模板也可以访问外部作用域对象
+- 用法：ng-transclude
+
+```
+<div dir title="123">
+        <ul>
+            <li>1</li> 
+            <li>2</li>
+        </ul>
+    </div>
+        <script>
+                 angular.module("mytry",[])
+                 .directive("dir",function(){
+                    return {
+                        restrict:'EA',
+                        scope:{
+                            title:'@'
+                        },
+                        transclude:false,
+                        template:'<div><h3>{{title}}</h3><p ng-transclude></p></div>'
+                    }
+                 });
+        </script>
+```
+
+问题：
+- 使用了transclude,控制器无法正常监听数据模型的变化
+
+---
+
+####controller
+
+- 字符串
+- 函数
+
+```
+angular.module('myApp',[]).directive('myD',function(){
+return{
+
+controller:'SomeControll'
+}
+})
+
+angular.module('myApp',[]).controller('SomeControll',function($scope,$element,$attrs,$transclude){
+
+})
+
+```
+
+- $scope
+
+> 与指令元素相关的当前作用域
+
+- $element
+
+> 当前指令对应的元素
+
+- atts
+
+> 由当前属性组成的对象
+
+```
+<div id="s" class="e"></div>
+
+{
+id:"s",
+class:"e"
+}
+```
+
+- $trusclude
+
+>
+
+
+---
 
 未完待续:
 
