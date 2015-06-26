@@ -145,6 +145,68 @@ ng-if优先级>ngView
 
 ---
 
+####scope参数
+
+默认值：false
+
+- false（父作用域 = 子作用域）
+> 修改子作用域会影响父作用域
+
+- true（父作用域 ! = 子作用域）
+> 子作用域继承副作用域，修改子作用域不会影响父作用域
+
+- {} （父作用域 ! = 子作用域）
+> 一个全新的独立作用域，不存在父子关系，理解为同级吧
+
+对比指令中link的 $scope和controller的 $scope
+
+---
+
+####绑定策略
+目的：让新的作用域可以访问当前本地作用域中的变量
+
+- @
+
+> 将本地作用域同dom属性值进行绑定，指令内部作用域可以使用外部作用域的变量
+
+- =
+
+> 双向绑定
+
+- &
+
+>
+
+```
+Scope:{
+	some:"need"
+},
+
+template:'<h3>{{some}}</h3>',
+controller: function($scope){
+$scope.some === "need"
+}
+
+```
+注意：上面的代码是有问题的
+
+- 指令的的Scope变量不是直接在Scope中设置的，而是在`<directive>`标签中设置的，
+- 通过Scope配置的关系传递进隔离作用域中，
+- scope起类似xml的映射关系作用
+
+```
+<div my-directive some-attr="123"></div>
+
+Scope:{
+	haha:'@someAttr'
+},
+template:'<h3>{{haha}}</h3>',
+controller: function($scope){
+$scope.haha//就可以获取到了
+}
+```
+
+---
 
 
 未完待续:
