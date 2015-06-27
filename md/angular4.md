@@ -175,7 +175,35 @@ ng-if优先级>ngView
 
 - &
 
->
+> 从隔离scope中调用父scope中定义的函数，为了能够访问外部scope中定义的函数
+
+```
+	<body ng-app="myApp">
+	<div ng-controller="haha">
+ 	<div dir say="hello()"></div>
+</div>
+  <script>
+    angular.module('myApp', [])
+    .controller('haha', function($scope) {
+      // we can leave it empty, it just needs to be defined
+      $scope.hello = function(){
+      	console.log("haha");
+      }
+    })
+   
+    .directive('dir', function() {
+      return {
+        restrict: 'A',
+	    scope: {
+	    	yoyo:'&say'
+	    },
+	    template:"<button ng-click='yoyo()'>hh</button>"
+      }
+    })
+  </script>
+
+</body>
+```
 
 ```
 Scope:{
