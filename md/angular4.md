@@ -314,7 +314,193 @@ class:"e"
 
 - $trusclude
 
->
+> 如果你在指令定义中设置 transclude:true，一个新的嵌入的scope会被创建，它原型继承自父scope。 
+> 如果你想要你的指令使用隔离的scope，但是它所包含的内容能够在父scope中执行，transclusion也可以帮忙
+
+```
+app.directive('outputText', function() {
+  return {
+    transclude: true,
+    scope: {},
+    template: '<div ng-transclude></div>'
+  };
+});
+```
+```
+<div output-text>
+  <p>Hello {{name}}</p>//在父作用域里被初始化了
+</div>
+```
+
+1.ng-transclude指明的是一个插入的位置
+
+2.指令中标签里的元素都会先删除然后被嵌入包含后的内容所替换。
+
+**但是局限出现了**
+- ng-transclude只能提供一个统一的插入位置，如果想要改变传入的dom结构，一个ng-transclude是不够的
+
+例如：
+
+```
+div ng-controller="Ctrl">
+      <pane title="{{title}}">
+            <span class="time">time</p>
+            <p class="type">{{type}}<p>
+            <p class="content">{{text}}<p>
+      </pane>
+</div>
+```
+最终要变成
+
+```
+<div style="border: 1px solid black;">
+    <div style="background-color: gray">我是标题<span class="time">我是时间</span></div>
+    <p class="type">我是分类</p>
+    <p class="content">我是内容</p>
+</div>
+```
+
+**于是两种解决方法**
+
+- 使用compile函数的transclude参数
+
+```
+app.directive('pane', function() {
+    return {
+        restrict: 'EA',
+        template: '<div style="border: 1px solid black;"><div class="title" style="background-olor: gray">{{title}}</div></div>',
+        replace: true,
+        transclude: true,
+        compile: function(element, attrs, transcludeFn) {
+            return function (scope, element, attrs) {
+                transcludeFn(scope, function(clone) {
+                    var title= element.find('title');
+                    var time = clone.find('.time');
+                    var type = clone.find('.type'); 
+                    var text= clone.find('.content'); 
+                                                                                                                                      
+                    title.append(time);
+                    element.append(type);
+                    element.append(text)
+                });
+            };
+        }
+    };
+});
+```
+
+transcludeFn是一个function：
+> transcludeFn(scope, function(clone){})作用域和嵌入包含的内容，clone嵌入的内容的jquery封装，有了它，我们就可以做任何想要做的dom操作了。
+
+- 在controller里注入$transclude
+
+```
+app.directive('pane', function() {
+    return {
+        restrict: 'EA',
+        template: '<div style="border: 1px solid black;"><div class="title" style="background-olor: gray">{{title}}</div></div>',
+        replace: true,
+        transclude: true,
+        controller: ['$scope', '$element', '$transclude', function ($scope, $element, $transclude) {
+            $transclude(function(clone, scope) {
+                var title= element.find('title');
+                var time = clone.find('.time');
+                var type = clone.find('.type');
+                var text= clone.find('.content');
+                                                                                                                                
+                title.append(time);
+                element.append(type);
+                element.append(text)
+            });
+        }],
+    };
+});
+```
+
+demo2
+
+```
+<body ng-app="myApp">
+	<div ng-controller="haha">
+ 	<div dir >
+ 		<h3>ss</h3>
+ 	</div>
+</div>
+  <script>
+    angular.module('myApp', [])
+    .controller('haha', function($scope) {
+      // we can leave it empty, it just needs to be defined    
+    })   
+    .directive('dir', function() {
+      return {
+        restrict: 'A',
+        transclude:true,
+	    controller:function($scope,$element,$transclude){
+	    	$transclude(function(clone){
+	    		console.log(clone);
+	    		var a = angular.element('<a>');
+	    		a.attr('href',clone.text());
+	    		a.text(clone.text());
+	    		$element.append(a);
+	    	})    		
+	    }
+      }
+    })
+  </script>
+
+```
+
+####transclude的作用域
+
+在官方文档中提到过deretive的作用域是单独的，transclude也创建了一个单独的作用域，而且与derectvie的作用域是平行的（兄弟）
+
+---
+
+`注意`
+
+指令的控制器和link函数可以进行互换，区别是，控制器用来提供可在指令间复用的行为，link只定义当前指令中的行为，无法在指令间复用
+
+技术上讲，$scope会在dom元素被实际渲染之前传入到controller中，在有些情况，controller中的scope与我们预期的不同，这样scope就无法保证可以被正常更新
+
+当要与当前屏幕上作用域交互的话，可以使用被传入到link中的scope
+
+---
+
+####匿名控制器
+- 无需注入scope
+- controller 中scope改用this
+
+两种形式：
+- 指令中
+
+```
+.directive('dir',function(){
+return {
+restrict:'A',
+template:'<h4>{{m.msg}}</h4>',
+controllerAs:'m',
+controller: function(){
+this.msg = 'hhhh'
+}
+}
+});
+```
+
+- 普通
+
+```
+<body ng-app="myApp">
+	<div ng-controller="haha as me">
+ 	{{me.md}}
+</div>
+  <script>
+    angular.module('myApp', [])
+    .controller('haha', function() {
+      // we can leave it empty, it just needs to be defined
+     this.md = 'haha'
+    })
+   </script>
+```
 
 
 ---
