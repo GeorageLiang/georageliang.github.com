@@ -501,7 +501,67 @@ this.msg = 'hhhh'
     })
    </script>
 ```
+---
+####require
 
+> require的值是一个指令的名字，require会将该名字的指令的controller注入到当前调用该属性的指令中，
+> 注入到link函数的第四个参数ctrl
+
+前缀：
+- ？
+
+> 在当前指令中查找controller，没有，ctrl传值为null
+
+- ^
+
+> 在上游的指令链中寻找
+
+- ?^
+
+> 选择的加载需要的指令并在父指令链中查找
+
+- 用法一
+
+```
+var app = angular.modeule('myapp',[]);  
+  
+app.directive('common',function(){  
+    return {  
+    ...  
+    controller: function($scope){  
+        this.method1 = function(){  
+        };  
+        this.method2 = function(){  
+        };  
+    },  
+    ...  
+    }  
+});  
+  
+app.directive('d1',function(){  
+    return {  
+    ...  
+    require: '?^common',  
+    link: function(scope,elem,attrs,common){  
+        scope.method1 = common.method1;  
+        ..  
+        },  
+    ...  
+    }  
+});  
+```
+
+- 用法二
+
+[传送门](http://hudeyong926.iteye.com/blog/2074238)
+
+问题：指令链？
+
+---
+
+####angular的生命周期
+- 编译
+- 链接
 
 ---
 
