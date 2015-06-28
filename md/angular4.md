@@ -560,8 +560,41 @@ app.directive('d1',function(){
 ---
 
 ####angular的生命周期
-- 编译
-- 链接
+- 编译(compile)
+
+> 遍历dom，编译（将指令中的模板插入等工作）
+
+- 链接(link)
+
+> pre-link阶段 ，生成dom实例，重新遍历，不注入scope
+
+> post-link阶段，反向注入scope
+
+[具体细节](http://www.jb51.net/article/58229.htm)
+
+---
+
+####ngModelController
+
+属性：
+
+- $viewValue(更新视图所需的实际字符串)
+- $modelValue(由数据模型持有)
+- $parse（函数数组，ngModel中读取的值传入$parse中的函数，其中的函数依次解析）
+- $formatters(对值进行格式化)
+- $viewChangeListeners(在视图中的值变化时调用)
+- $error(没有通过验证的错误信息)
+- $dirty（是否进行过交互）
+- $valid（是否有错误）
+- $invalid （是否存在至少一个错误）
+
+---
+
+未完待续：
+- ngModel
+- ngModelController
+- 自定义验证
+- 自定义渲染
 
 ---
 
