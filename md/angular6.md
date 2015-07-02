@@ -11,6 +11,7 @@ Angular学习之路由
 angular1.2 之后 ngRoute被抽成独立模块
 
 ####使用
+
 ```
 <script src="angular.js"></script>
 <script src="angular-route.js"></script>
@@ -33,7 +34,9 @@ angular1.2 之后 ngRoute被抽成独立模块
 ```
 http://localhost:63342/angul/disabled.html#/haha
 ```
+
 注：
+
 - angular.module('myApp', ['ngRoute'])
 
 ---
@@ -43,7 +46,9 @@ http://localhost:63342/angul/disabled.html#/haha
 
 ```
 .when（'/inbox/:name',function(){}）
+
 ```
+
 获取：
 使用$routeParams,后面介绍
 
@@ -52,6 +57,7 @@ http://localhost:63342/angul/disabled.html#/haha
 ####意外定位(redirectTo)
 
 找不到匹配url后重定位
+
 ```
 .when()
 .when()
@@ -84,6 +90,7 @@ templateUrl:'views/ibox.html'
 ```
 
 $routeParams对象
+
 ```
 {
 name:'all'
@@ -165,6 +172,7 @@ $apply将函数变化抛到应用外部
 ---
 
 待续：
+
 - resolve
 - HTML5模式
 - 路由事件
