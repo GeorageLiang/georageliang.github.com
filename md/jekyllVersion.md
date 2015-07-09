@@ -27,4 +27,7 @@ $ export GIT_SSL_NO_VERIFY=1 #意思是SSL不验证吧好像，export变量之�
 ####linux ubuntu
 - sudo /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
 - sudo /usr/local/nginx/sbin/nginx -s reload
+- ps -e
+- sudo kill port
+- grep ngnix
 
