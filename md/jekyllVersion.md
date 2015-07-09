@@ -30,4 +30,5 @@ $ export GIT_SSL_NO_VERIFY=1 #意思是SSL不验证吧好像，export变量之�
 - ps -e
 - sudo kill port
 - grep ngnix
+-  sudo apt-get remove 软件名
 
