@@ -24,7 +24,7 @@ gem install pygments.rb --version "=0.5.0"
 $ export GIT_SSL_NO_VERIFY=1 #意思是SSL不验证吧好像，export变量之后就可以输入密码和用户名了。
 
 ---
-linux ubuntu
-sudo /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
-sudo /usr/local/nginx/sbin/nginx -s reload
+####linux ubuntu
+- sudo /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+- sudo /usr/local/nginx/sbin/nginx -s reload
 
