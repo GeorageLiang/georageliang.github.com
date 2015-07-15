@@ -15,7 +15,9 @@ SAE+wordpress搭建
 ---
 sina sae搭建wordpress数据库配置
 
-wp-config.php
+**wp-config.php**
+
+
 ```
 <?php
 /**
