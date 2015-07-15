@@ -116,5 +116,7 @@ require_once(ABSPATH . 'wp-settings.php');
 ####XAMPP 本地运行wordpress
 
 [连接](http://jingyan.baidu.com/article/148a192193a9984d71c3b191.html)
+
 [wordpress下载](http://cn.wordpress.org/)
+
 [XAMPP下载](http://pan.baidu.com/s/1pJDWuJx)
