@@ -4,7 +4,7 @@ title:  "PHP Study"
 date:   2015-07-20 11:38:11
 categories: PHP
 path: /md/phpStudy
-describe: 
+describe:
 ---
 
 

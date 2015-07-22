@@ -1,10 +1,10 @@
----
-layout: post
-title:  "Angular5"
-date:   2015-06-19 22:40:11
-categories: Angular
-permalink: /md/angular5/
----
+	---
+	layout: post
+	title:  "Angular5"
+	date:   2015-06-19 22:40:11
+	categories: Angular
+	permalink: /md/angular5/
+	---
 
 
 AngularJS模块加载
