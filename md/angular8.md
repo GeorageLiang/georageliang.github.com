@@ -79,11 +79,21 @@ angular.module('myApp')
 
 ---
 
+####annotate()
+
+返回一个由服务名称组成的数组
+
+---
+
 ####get()
+
+返回一个服务实例
 
 ---
 
 ####has()
+
+找服务
 
 ---
 
@@ -97,6 +107,27 @@ angular.module('myApp')
 
 ####ngMin
 
+Angular设计的预压缩工具，能够减少定义依赖关系的工作量，它会遍历整个应用帮我们设置好依赖注入
+
+```
+angular.module('myApp',[])
+.directive('myDirective',function($http){
+
+})
+
+.controller('IndexController'，function($scope,$q){
+
+})
+```
+
+
+会将上面的转换成行内注入声明
+
+> npm install -g ngmin
+
+可编写在gulp 或 grunt里
+
+ngmin input.js(输入文件) out.js（输出文件）
 ---
 
 
@@ -242,238 +273,6 @@ return {
 ---
 
 
-Angular学习之动画
-===
-
-> 由于angular中提倡尽量少使用jquery，这就使得强大的dom效果，动画，特效不能被方便的使用
-> angular团队创建了ngAnimate模块，让我们的应用能够提供css和javascript动画
-
----
-
-三种途径：
-- css3
-- js动画
-- css3过渡
-
----
-
-###安装
-
-自1.2.0起，动画就不在是Angular核心的一部分了，他们存在于自己的模块中了
-
-cdn地址
-> http://cdn.bootcss.com/ionic/1.0.1/js/angular/angular-animate.js
-
-
-
----
-
-#### $resource学习(简单了解下)
-
-ngResource模块是一个可选的angularjs模块，如果需要使用，我们要单独引用js
-
-```
-<script type="text/javascript" src="/javascripts/angular-resource.js">
-```
-
-####应用
-
-```
-var User = $resource('/api/users/:userId', {userId:'@id'});
-//后面的对象会最终匹配进url
-
-User.get({id:'123'}, successFn, errorFn);
-
-//get方法中的对象，最终传值并覆盖之前的{}
-
-```
-
-该方法向url发送一个get请求，并期望一个json类型的响应。这里会向/api/users/123发送一个请求，successFn处理请求成功响应，errorFn处理错误。
-
-其他方法：
-
-```
-User.query(params, successFn, errorFn)
-//同get()方法使用类似，一般用来请求多条数据。
-```
-
-```
-save(params, payload, successFn, errorFn);
-//save方法会发起一个post请求，params参数用来填充url中变量，对象payload会作为请求体进行发送
-```
-
-```
-delete(params, payload, successFn,errorFn)
-//delete方法一个DELETE请求，payload作为消息体进行发送
-```
-
-```
-remove(params, payload, successFn, errorFn)
-//同delete类似，不同的是remove用来移除多条数据
-```
-
-我们看可以定义处理成功以及处理失败的函数，这些函数接受的参数不仅仅是简单的对象，而是经过包装之后的对象，会被添加
-- $save(), 
-- $remove(), 
-- $delete()
-
-三个方法,调用这三个方法可以再次发送请求进行交互
-
-```
-User.get({id:'123'}, function(user){
-  user.name = 'changeAnotherName';
-  user.$save();
-//这里等价于User.save({id:'123'},{name:'changeAnotherName'})
-});
-```
-
-> get请求成功后返回user，我们调用save方法再次发送了请求
-
----
-
-####Restangular
-
-> 在xhr通信方面就不用$http那些了，restangular提供了更好的使用体验
-
-####好处
-
-#####1.promise
-
-Restangular支持promise，这样就可以使用链式操作啦.haha
-
-#####2.清晰明了
-
-通俗易懂
-
-#####3.全Http方法支持
-
-支持所有http方法
-
-#####4.忘记URL
-
-不需要事先知道URL或提前指定他们（对比resource）
-
-#####5.资源嵌套
-
-直接处理嵌套资源，无需创建新的resangular实例
-
-#####6.一个实例
-
-在使用过程中仅需要创建一个res资源对象实例
-
----
-
-####安装
-
-[下载](https://github.com/mgonto/restangular)
-
-`注`rest 依赖LO-Dash或Underscore，为了保证rest可以正常运行，需要至少引入一个包
-
-```
-angular.module('myAp',[]).factory('UserService',function(Restangular){
-
-})
-```
-
-####Restangular对象介绍
-
-两种方法创建拉取数据对象，可以为拉取数据的对象设置基础路由
-
-```
-var User =  Restangular.all('users');
-```
-
-请求根路径; /user
-
-```
-var allUser = User.getList();//get /users
-```
-通过单个对象发送嵌套请求
-
-```
-var oneUser = Restangular.one('users','abc123');
-//get /users/abc123
-
-oneUser.get().then(function(user){
-user.getList('in');
-//
-})
-//get /users/abc123/in
-```
-
-####创建主restangular对象的三种方法
-
-```
-var User =  Restangular.all('users');
-```
-
-```
-// Stating main object
-Restangular.one('accounts', 1234)
-```
-
-```
-// Gets a list of all of those accounts
-Restangular.several('accounts', 1234, 123, 12345);
-```
-
----
-
-####两种返回形式
-
-then()
-```
-var baseAccounts = Restangular.all('accounts');
-
-// This will query /accounts and return a promise.
-baseAccounts.getList().then(function(accounts) {
-  $scope.allAccounts = accounts;
-});
-```
-
-$object
-```
-$scope.accounts = Restangular.all('accounts').getList().$object;
-```
-
----
-
-####post
-
-```
-var baseAccounts = Restangular.all('accounts');
-var newAccount = {name: "Gonto's account"};
-// POST /accounts
-baseAccounts.post(newAccount);
-```
-
-```
-var myBuilding = {
-    name: "Gonto's Building",
-    place: "Argentina"
-  };
-
-  // POST /accounts/123/buildings with MyBuilding information
-  firstAccount.post("Buildings", myBuilding).then(function() {
-    console.log("Object saved OK");
-  }, function() {
-    console.log("There was an error saving");
-  });
-```
-
-####get
-
-```
-// Just ONE GET to /accounts/123/buildings/456
-Restangular.one('accounts', 123).one('buildings', 456).get()
-```
-
-```
-// Just ONE GET to /accounts/123/buildings
-Restangular.one('accounts', 123).getList('buildings')
-```
-
----
 
 
 
