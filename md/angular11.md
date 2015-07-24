@@ -98,6 +98,7 @@ Restangular.several('accounts', 1234, 123, 12345);
 ####两种返回形式
 
 then()
+
 ```
 var baseAccounts = Restangular.all('accounts');
 
@@ -108,6 +109,7 @@ baseAccounts.getList().then(function(accounts) {
 ```
 
 $object
+
 ```
 $scope.accounts = Restangular.all('accounts').getList().$object;
 ```
