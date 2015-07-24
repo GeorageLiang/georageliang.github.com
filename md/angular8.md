@@ -128,6 +128,7 @@ angular.module('myApp',[])
 可编写在gulp 或 grunt里
 
 ngmin input.js(输入文件) out.js（输出文件）
+
 ---
 
 
