@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Angular学习之动画"
+date:   2015-07-24 22:40:11
+categories: Angular
+permalink: /md/angular9/
+---
+
 
 Angular学习之动画
 ===

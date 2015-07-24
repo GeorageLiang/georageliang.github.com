@@ -1,3 +1,13 @@
+---
+layout: post
+title:  "Angular学习之XHR通信"
+date:   2015-07-24 22:40:11
+categories: Angular
+permalink: /md/angular10/
+---
+
+
+
 Angular学习之XHR通信
 ===
 
