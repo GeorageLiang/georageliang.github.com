@@ -332,4 +332,6 @@ background-color: gainsboro;
 .page-foot a{
   text-decoration:none;
 }
-
+.page-content img{
+  max-width: 90%;
+}
