@@ -16,8 +16,11 @@ permalink: /md/qiniu/
 ####创建工程目录
 【解压】
 
-![Alt text](http://7xkj5m.com1.z0.glb.clouddn.com/微博桌面截图_20150811151615.jpg)
+![Alt text](http://7xkj5m.com1.z0.glb.clouddn.com/微博桌面截图_20150811143629.jpg)
+
+
 ***例如***：
+
 - 一个名为nongfuPage的zip包，将其解压后生成同名文件夹
 - 想要创建一个工程名为haha的工程
 - 打开nongfuPage文件夹
