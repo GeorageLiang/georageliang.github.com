@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "七牛云"
+date:   2015-08-11 09:19:11
+categories: others
+path: /md/qiniu
+describe: 七牛云zip包上传配置
+---
+
