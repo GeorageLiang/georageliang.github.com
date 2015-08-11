@@ -16,7 +16,7 @@ permalink: /md/qiniu/
 ####创建工程目录
 【解压】
 
-![Alt text](http://7xkj5m.com1.z0.glb.clouddn.com/微博桌面截图_20150811143629.jpg)
+![Alt text](http://7xkj5m.com1.z0.glb.clouddn.com/微博桌面截图_20150811114630.jpg)
 
 
 ***例如***：
@@ -93,6 +93,8 @@ permalink: /md/qiniu/
 > `上传时别忘了删掉压缩包，别把压缩包也传上去`
 
 ***--配置信息详情请见配置文档--***
+
+---
 
 ####点击确认
 
