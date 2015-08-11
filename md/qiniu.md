@@ -21,14 +21,11 @@ permalink: /md/qiniu/
 
 ***例如***：
 
-- 一个名为nongfuPage的zip包，将其解压后生成同名文件夹
-- 想要创建一个工程名为haha的工程
-- 打开nongfuPage文件夹
-- 在里面新建一个名为haha的文件夹
-- 将所有文件都剪切进haha文件夹内
+- 到E:盘中新建一个名为qiniu的文件夹
+- 名为nongfuPage的zip包，在其中解压，生成同名文件
+- 这个工程的***`工程目录名`***就为`nongfuPage`
 
-工程名创建成功
-`注意`：工程必须要有工程名，否则上传会出问题
+工程目录创建成功
 
 
 
@@ -106,7 +103,7 @@ permalink: /md/qiniu/
 
 ####访问
 
-#####7xksmb.com2.z0.glb.qiniucdn.com/工程名/工程主页面
+#####7xksmb.com2.z0.glb.qiniucdn.com/工程目录名/工程主页面
 
 - 工程主页面(通常是index.html，具体要看解压文件主目录里的.html文件)
 
