@@ -16,7 +16,7 @@ permalink: /md/qiniu/
 ####创建工程目录
 【解压】
 
-![Alt text](./微博桌面截图_20150811114630.jpg)
+![Alt text](http://7xkj5m.com1.z0.glb.clouddn.com/微博桌面截图_20150811151615.jpg)
 ***例如***：
 - 一个名为nongfuPage的zip包，将其解压后生成同名文件夹
 - 想要创建一个工程名为haha的工程
@@ -33,11 +33,11 @@ permalink: /md/qiniu/
 
 - 用账号登录
 - 点击添加站点（如图所示）
-![Alt text](./微博桌面截图_20150811143424.jpg)
+![Alt text](http://7xkj5m.com1.z0.glb.clouddn.com/微博桌面截图_20150811143424.jpg)
 
 - 点击后出现以下界面
 
-![Alt text](./微博桌面截图_20150811143458.jpg)
+![Alt text](http://7xkj5m.com1.z0.glb.clouddn.com/微博桌面截图_20150811143458.jpg)
 
 - 填好信息
 
@@ -47,13 +47,13 @@ permalink: /md/qiniu/
 
 - 点击确定添加站点
 
-![Alt text](./微博桌面截图_20150811143629.jpg)
+![Alt text](http://7xkj5m.com1.z0.glb.clouddn.com/微博桌面截图_20150811143629.jpg)
 
 - 复制第二个（精简代码）后粘贴到主工程网页的代码中（如下）
 - 将工程目录中的.html文件以记事本打开（例子中是index.html）
 - 找到《/body》,紧贴着在上面粘贴之前复制的代码并保存即可
 
-![Alt text](./微博桌面截图_20150811143851.jpg)
+![Alt text](http://7xkj5m.com1.z0.glb.clouddn.com/微博桌面截图_20150811143851.jpg)
 
 
 ---
@@ -84,7 +84,7 @@ permalink: /md/qiniu/
 
 > 同源目录：工程本地所在地址
 
-![Alt text](./微博桌面截图_20150811114630.jpg)
+![Alt text](http://7xkj5m.com1.z0.glb.clouddn.com/微博桌面截图_20150811114630.jpg)
 
 > 这里 `E:/qiniu` 就是同源目录
 > `上传时别忘了删掉压缩包，别把压缩包也传上去`
@@ -105,6 +105,6 @@ permalink: /md/qiniu/
 
 - 工程主页面(通常是index.html，具体要看解压文件主目录里的.html文件)
 
-![Alt text](./微博桌面截图_20150811151615.jpg)
+![Alt text](http://7xkj5m.com1.z0.glb.clouddn.com/微博桌面截图_20150811151615.jpg)
 
 能访问的话就说明你成功了：）
