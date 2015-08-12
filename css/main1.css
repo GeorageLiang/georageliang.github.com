@@ -36,8 +36,10 @@ background-color: gainsboro;
   list-style-type: none;
   margin-left: 10%;
   margin-top: 13px;
+  cursor: pointer;
 }
 .navbar li a{
+  cursor: pointer;
   text-decoration: none;
   color: #0086b3;
 }
@@ -334,4 +336,17 @@ background-color: gainsboro;
 }
 .page-content img{
   max-width: 90%;
+}
+.nav-footer{
+  overflow: hidden;
+  background-color: #0086b3;
+  height: 2px;
+  position: absolute;
+  top: 68%;
+  width: 0px;
+  margin-left: -400px;
+  transition: 0.6s ease all;
+  -moz-transition: 0.6s ease all; /* Firefox 4 */
+  -webkit-transition: 0.6s ease all; /* Safari 和 Chrome */
+  -o-transition: 0.6s ease all; /* Opera */
 }
