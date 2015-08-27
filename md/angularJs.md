@@ -523,5 +523,5 @@ ng-bind的简略形式，常用于行内文本中
 
 ---
 
-[ppt](georageliang.github.io/revealpractice)
+[ppt](http://www.georageliang.github.io/revealpractice)
 
