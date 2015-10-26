@@ -1,7 +1,19 @@
 <nav class="navbar navbar-inverse">
+<!--<div class="visible-md-block visible-lg-block">-->
 
-  <ul>
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-ul" aria-expanded="false">
+      <!--<span class="sr-only">Toggle navigation</span>-->
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
     <img class="nav-logo" src="/imgs/Alienware.png">
+  </div>
+
+  <div class="collapse navbar-collapse" id="navbar-ul">
+  <ul class="nav">
+
     <li class="shake shake-slow"><a href="/index.html">home</a></li>
     <li class="shake shake-little" onclick=" ga('send', 'event', 'button', 'click', 'nav-buttons');"><a href="/blogindex/index.html">Tech</a></li>
     <li class="shake shake-horizontal"><a href="/">Picture</a></li>
@@ -9,6 +21,14 @@
     <li class="shake shake-rotate"><a>Plan</a></li>
     <li class="shake shake-opacity"><a>AboutMe</a></li>
   </ul>
-  <div class="nav-footer"></div>
+  <div class="nav-footer visible-md-block visible-lg-block"></div>
+  </div>
+<!--</div>-->
+<!--<div class="visible-sm-block visible-xs-block">-->
+
+
+<!--</div>-->
+
   <!--</div>-->
 </nav>
+
