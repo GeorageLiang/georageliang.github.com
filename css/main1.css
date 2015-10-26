@@ -204,9 +204,9 @@ background-color: gainsboro;
   height: 180px;
 }
 .github-content-grid{
-  margin:0 auto;
+  /*margin:0 auto;*/
   height: 160px;
-  width: 90%;
+  width: 100%;
   color: #ddd;
 }
 
