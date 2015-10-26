@@ -354,6 +354,18 @@ background-color: gainsboro;
   -webkit-transition: 0.6s ease all; /* Safari 和 Chrome */
   -o-transition: 0.6s ease all; /* Opera */
 }
-#navbar-ul{
-  background-color: white;
+
+@media (max-width:768px) {
+  #navbar-ul{
+    background-color: white;
+    }
+}
+
+@media (min-width: 768px) {
+  #navbar-ul{
+    background-color: #222;
+  }
+}
+
+
 }
