@@ -37,10 +37,15 @@
         if (j != i) {
           i++;
         } else if(w == 1){
-          $("#jparticle-container").removeJParticle().jParticle({
-            particlesNumber:50
-          });
+          $("#jparticle-container").freezeJParticle().removeJParticle();
+          setTimeout(function(){
+            $("#jparticle-container").jParticle({
+              particlesNumber:50
+            });
+          },500);
           w = 2;
+          j = 0;
+          i = 0;
         }
       },300);
     </script>
