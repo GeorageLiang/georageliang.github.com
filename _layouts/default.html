@@ -28,9 +28,10 @@
         particlesNumber:50
       });
       $(window).resize(function() {
-        $("#jparticle-container").jParticle({
+        $("#jparticle-container").removeJParticle().jParticle({
           particlesNumber:50
         });
+
       });
     </script>
 
