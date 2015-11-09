@@ -27,12 +27,22 @@
       $("#jparticle-container").jParticle({
         particlesNumber:50
       });
+      var j = 0,i = 0,w = 0;
       $(window).resize(function() {
-        $("#jparticle-container").removeJParticle().jParticle({
-          particlesNumber:50
-        });
-
+        j = j+1;
+        w = 1;
       });
+      setInterval(function(){
+
+        if (j != i) {
+          i++;
+        } else if(w == 1){
+          $("#jparticle-container").removeJParticle().jParticle({
+            particlesNumber:50
+          });
+          w = 2;
+        }
+      },300);
     </script>
 
   </body>
