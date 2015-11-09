@@ -86,7 +86,7 @@ background-color: gainsboro;
 .head-img{
   height: 100px;
   width: 100px;
-  background: url("/imgs/head.jpg") no-repeat;
+  background: url("/imgs/head1.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
