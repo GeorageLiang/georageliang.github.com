@@ -1,4 +1,52 @@
+//var h1= parseInt($(".head-img")[0].offsetHeight);
+//var b = 0;
+//
+//$(document).scroll(function(){
+//  var op = $(".head-img").css("-webkit-filter");
+//  var vtop = $(document).scrollTop();
+//
+//  var c= vtop;
+//
+//  if(c>=b){
+//    if(c>130){
+//
+//      $(".head-img").css("-webkit-filter","blur(3px)");
+//
+//    }
+//    if(c>260){
+//
+//      $(".head-img").css("-webkit-filter","blur(7px)");
+//
+//    }
+//
+//    b=c;
+//
+//  }
+//  if(b>c){
+//    if(c<130){
+//      $(".head-img").css("-webkit-filter","blur(0px)");
+//
+//    }
+//
+//    if(c<260 && c>130){
+//
+//      $(".head-img").css("-webkit-filter","blur(1px)");
+//
+//    }
+//    if(c>260){
+//
+//      $(".head-img").css("-webkit-filter","blur(4px)");
+//
+//    }
+//    b=c;
+//  }
+//
+//});
+
+
+
 $(document).ready(function(){
+
   $(".navbar-inverse").headroom({
     "tolerance": 20,
     "offset": 520,
@@ -25,6 +73,5 @@ $(document).ready(function(){
   },1000);
 
 },2000);
-
 
 });

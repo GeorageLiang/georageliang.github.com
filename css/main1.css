@@ -71,10 +71,10 @@ background-color: gainsboro;
 .banner{
   /*width: 100%;*/
   height: 300px;
-  background: url("/imgs/banner1.jpg") no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  /*background: url("/imgs/banner1.jpg") no-repeat;*/
+  /*background-position: center;*/
+  /*background-size: cover;*/
+  /*background-attachment: fixed;*/
 }
 .container{
 
@@ -84,23 +84,23 @@ background-color: gainsboro;
   background-color: white;
 }
 .head-img{
-  height: 120px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
   background: url("/imgs/head.jpg") no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  background-size: cover;
   position: relative;
   top: -50px;
-  left: 15%;
-  border-radius: 15%;
+  left: 50%;
+  margin-left: -50px;
+  border-radius: 100%;
   box-shadow: 0 3px 10px rgba(0,0,0,.5);
 }
 .head-title{
   width: 400px;
   height: 70px;
-
   position: relative;
-  top: -120px;
+  top: -50px;
   left: 50%;
   margin-left: -200px;
   text-align: center;
@@ -367,5 +367,3 @@ background-color: gainsboro;
   }
 }
 
-
-}
