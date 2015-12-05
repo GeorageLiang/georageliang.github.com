@@ -13,6 +13,21 @@ gem uninstall pygments.rb --version "=0.5.4"
 gem install pygments.rb --version "=0.5.0"
 ```
 
+>  but you haven't included the `jekyll-paginate` gem. Ensure you have `gems: [jekyll-paginate]` in your configuration file.
+解决：
+
+```
+gem install jekyll-paginate
+
+```
+
+在yml中添加配置
+
+```
+ gems: [jekyll-paginate]
+
+```
+
 
 [jekyll-gh]:https://github.com/mojombo/jekyll
 [jekyll]: http://jekyllrb.com
