@@ -228,10 +228,15 @@ background-color: gainsboro;
   border-radius: 5px;
   box-shadow: 0 5px 30px rgba(0,0,0,.3);
 }
+.time-line{
+  background-color: #fff;
+  border-radius: 5px;
+}
 
 .time-head{
   position: relative;
-  right: 56px;
+  right: 0px;
+  top: 20px;
 }
 .time-label{
   position: relative;
@@ -242,6 +247,7 @@ background-color: gainsboro;
 .time-content{
   min-height:200px;
   margin-bottom: 20px;
+  padding-left: 20px;
 }
 /*--label-head--*/
 .label-head{
