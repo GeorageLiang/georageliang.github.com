@@ -3,7 +3,7 @@ layout: post
 title:  "angular之路由"
 date:   2015-07-02 09:19:11
 categories: angular
-path: /md/angular6
+path1: /md/angular6
 describe: angular之路由
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "js 交流收货"
 date:   2015-06-18 09:19:11
 categories: js
-path: /md/jsTalk
+path1: /md/jsTalk
 describe: 关于js交流“收货”
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "js对象到原型"
 date:   2015-06-29 09:19:11
 categories: javascript
-path: /md/jsproto
+path1: /md/jsproto
 describe: js的对象创建，构造方法，原型，继承
 ---
 

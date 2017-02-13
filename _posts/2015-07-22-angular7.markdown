@@ -3,7 +3,7 @@ layout: post
 title:  "angular学习之服务"
 date:   2015-07-22 11:38:11
 categories: angular
-path: /md/angular7
+path1: /md/angular7
 describe:
 ---
 

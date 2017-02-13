@@ -3,7 +3,7 @@ layout: post
 title:  "Angular学习之Restangular"
 date:   2015-07-24 11:38:11
 categories: angular
-path: /md/angular11
+path1: /md/angular11
 describe:
 ---
 

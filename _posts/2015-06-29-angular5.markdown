@@ -3,7 +3,7 @@ layout: post
 title:  "angular之模块加载以及provider"
 date:   2015-06-29 09:19:11
 categories: angular
-path: /md/angular5
+path1: /md/angular5
 describe: angular之模块加载以及provider
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Welcome to less!"
 date:   2015-05-04 09:19:11
 categories: less
-path: /md/less
+path1: /md/less
 describe: Less 是一门 CSS 预处理语言，它扩充了 CSS 语言，增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护、方便制作主题、扩充。
 ---
 

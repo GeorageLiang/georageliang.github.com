@@ -3,7 +3,7 @@ layout: post
 title:  "Hello Coffee!"
 date:   2015-05-05 09:19:11
 categories: coffee
-path: /md/coffee
+path1: /md/coffee
 describe: CoffeeScript是一套JavaScript的转译语言，创建者 Jeremy Ashkenas 戏称它是- JavaScript 的不那么铺张的小兄弟。因为 CoffeeScript 会将类似 Ruby 语法的代码编译成 JavaScript，而且大部分结构都相似，但不同的是 CoffeeScript 拥有更严格的语法。
 ---
 

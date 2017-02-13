@@ -3,7 +3,7 @@ layout: post
 title:  "Angular学习之XHR通信"
 date:   2015-07-24 11:38:11
 categories: angular
-path: /md/angular10
+path1: /md/angular10
 describe:
 ---
 

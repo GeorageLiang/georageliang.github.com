@@ -3,7 +3,7 @@ layout: post
 title:  "Jquery 学习笔记"
 date:   2015-05-05 09:19:11
 categories: jquery
-path: /md/jqueryNote
+path1: /md/jqueryNote
 describe:  关于jquery的学习笔记
 ---
 

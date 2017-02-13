@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Require extension"
-date:   2015-10-19 09:19:11
+date:   2015-10-19 09:19:11 +0800
 categories: javascript
 permalink: /md/requireExtension/
 ---

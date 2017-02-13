@@ -3,7 +3,7 @@ layout: post
 title:  "requireJs基本使用!"
 date:   2015-05-05 09:19:11
 categories: requirejs
-path: /md/require
+path1: /md/require
 describe: 基于 AMD（Asynchronous Module Definition）的 JavaScript 设计已经在目前较为流行的前端框架中大行其道，jQuery、Dojo、MooTools、EmbedJS 等纷纷在其最新版本中加入了对 AMD 的支持。本文介绍的是另一款较为精简的 RequireJS 框架，既想使用 AMD 的特性又不想引入一个庞大的库的开发人员，不妨试试 RequireJS。RequireJS 可以帮助用户异步按需的加载 JavaScript 代码，并解决 JavaScript 模块间的依赖关系，提升了前端代码的整体质量和性能。
 
 ---
