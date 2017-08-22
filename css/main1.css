@@ -6,7 +6,7 @@ body{
   padding: 0;
 background-color: gainsboro;
   /*min-width: 950px;*/
-  background: url("/imgs/brickwall.png") repeat;
+  background: url("http://ov3bsxxcr.bkt.clouddn.com/2017-08-22-brickwall.png") repeat;
 }
 
 
@@ -86,7 +86,7 @@ background-color: gainsboro;
 .head-img{
   height: 100px;
   width: 100px;
-  background: url("/imgs/head1.jpg") no-repeat;
+  background: url("http://ov3bsxxcr.bkt.clouddn.com/2017-08-22-head1.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
