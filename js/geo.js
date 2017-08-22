@@ -47,15 +47,15 @@
 
 $(document).ready(function(){
 
-  $(".navbar-inverse").headroom({
-    "tolerance": 20,
-    "offset": 520,
-    "classes": {
-      "initial": "header",
-      "pinned": "up",
-      "unpinned": "down"
-    }
-  });
+  //$(".navbar-inverse").headroom({
+  //  "tolerance": 20,
+  //  "offset": 520,
+  //  "classes": {
+  //    "initial": "header",
+  //    "pinned": "up",
+  //    "unpinned": "down"
+  //  }
+  //});
   setInterval(function(){                //每2秒钟执行一次
 
   $("#cat-head").css("-webkit-transform","rotate(-10deg)");
